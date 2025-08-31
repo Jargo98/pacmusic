@@ -27,3 +27,8 @@ jobs:
         run: | 
           sleep 10
           curl -f http://localhost:5000
+
+      - name: Get container status (for debugging)
+        run: |
+          sudo docker compose ps
+          sudo docker compose logs pacmusic-dev --tail=50
