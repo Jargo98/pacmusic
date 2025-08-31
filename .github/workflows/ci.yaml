@@ -26,5 +26,4 @@ jobs:
       - name: Hit Endpoint
         run: | 
           sleep 10
-          # Changed https to http as it's unlikely your dev server uses SSL.
           curl -f http://localhost:5000
