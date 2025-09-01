@@ -3,11 +3,13 @@ name: Dev Testing 🔎
 on:
   pull_request:
     branches: [ "main" ]
-
+  workflow_dispatch:
+  
 jobs:
   build-testing:
     name: Build and Testing
     runs-on: ubuntu-latest
+    environment: dev-testing
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4
