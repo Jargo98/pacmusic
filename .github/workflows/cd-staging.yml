@@ -3,11 +3,13 @@ name: Deploy Staging 🚀
 on:
   push:
     branches: [ "main" ]
+    workflow_dispatch:
 
 jobs:
   deploy-staging:
     name: Deploy to Staging Server
     runs-on: ubuntu-latest
+    environment: staging
 
     steps:
       - name: Execute Deployment Command
