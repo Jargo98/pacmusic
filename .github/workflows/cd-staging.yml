@@ -5,6 +5,7 @@ on:
     branches: [ "main" ]
   workflow_dispatch:
   
+
 jobs:
   deploy-staging:
     name: Deploy to Staging Server
@@ -12,9 +13,6 @@ jobs:
     environment: staging
 
     steps:
-      - name: Debug Available Secrets
-        run: echo "${{ toJSON(secrets) }}"
-
       - name: Execute Deployment Command
         uses: appleboy/ssh-action@v1
         env:
